@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="CreateBankAccountForBakery" time="53" tests="19" failures="2" errors="0">
+   <testsuite name="CreateBankAccountForBakery" tests="19" failures="2" errors="0" time="53" timestamp="2019-04-23 13:40:08" hostname="smart - Sara-IT" id="Test Suites/TestSuites/CreateBankAccountForBakery">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Reports\\TestSuites\\CreateBankAccountForBakery\\20190423_134005"/>
+         <property name="logFiles" value="C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Reports\\TestSuites\\CreateBankAccountForBakery\\20190423_134005\\execution0.log"/>
+         <property name="attachments" value="C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Reports\\TestSuites\\CreateBankAccountForBakery\\20190423_134005\\1556019627155.png"/>
+         <property name="hostName" value="smart - Sara-IT"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="6.0.5.10"/>
+         <property name="browser" value="Chrome 73.0.3683.103"/>
+         <property name="hostAddress" value="10.43.30.66"/>
+         <property name="sessionId" value="c06ca96c9f7b7ca756b2ff47ef34755d"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/General/GetData/AddBakeryBankAccountGetData" classname="Test Cases/General/GetData/AddBakeryBankAccountGetData" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:09 - [TEST_CASE][PASSED] - Test Cases/General/GetData/AddBakeryBankAccountGetData: Test Cases/General/GetData/AddBakeryBankAccountGetData
+
+2019-04-23 13:40:09 - [TEST_STEP][PASSED] - Query = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:09 - [TEST_STEP][PASSED] - file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:09 - [TEST_STEP][PASSED] - Query = "select * from base_bakery where BAKERY_CODE not in (select bakery_code from bakery_ach_data) and base_bakery.governorate_code=03": null
+
+2019-04-23 13:40:09 - [TEST_STEP][PASSED] - println(Query): null
+
+2019-04-23 13:40:09 - [TEST_STEP][PASSED] - dataBaseConnection.GetOracleQueryResult.conectsql("bdistribute", "12345678", Query, "C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\BakeryDosenotHaveBankAccount.txt"): dataBaseConnection.GetOracleQueryResult.conectsql is PASSED
+
+2019-04-23 13:40:11 - [MESSAGE][PASSED] - dataBaseConnection.GetOracleQueryResult.conectsql is PASSED
+
+2019-04-23 13:40:11 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ValidUserName.txt): null
+
+2019-04-23 13:40:11 - [TEST_STEP][PASSED] - file.write(findTestData("BakeryDataFileDirectorateAndCommodityEmployee").getValue(1, 1)): null
+
+2019-04-23 13:40:12 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ValidPassword.txt): null
+
+2019-04-23 13:40:12 - [TEST_STEP][PASSED] - file.write(findTestData("BakeryDataFileDirectorateAndCommodityEmployee").getValue(2, 1)): null
+
+2019-04-23 13:40:13 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\AccNumber.txt): null
+
+2019-04-23 13:40:13 - [TEST_STEP][PASSED] - file.write(findTestData("BakeryDataFileDirectorateAndCommodityEmployee").getValue(6, 1)): null
+
+2019-04-23 13:40:13 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\AccName.txt): null
+
+2019-04-23 13:40:13 - [TEST_STEP][PASSED] - file.write(findTestData("BakeryDataFileDirectorateAndCommodityEmployee").getValue(7, 1)): null
+
+2019-04-23 13:40:13 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\NIDNumber.txt): null
+
+2019-04-23 13:40:13 - [TEST_STEP][PASSED] - file.write("28502063200094"): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/DeleteAllReqBySpecificNID" classname="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/DeleteAllReqBySpecificNID" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:13 - [TEST_CASE][PASSED] - Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/DeleteAllReqBySpecificNID: Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/DeleteAllReqBySpecificNID
+
+2019-04-23 13:40:13 - [TEST_STEP][PASSED] - Query = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:13 - [TEST_STEP][PASSED] - Query = "begin for ch in (select REQ_CODE from REQ_BAKERY_ACH_DATA  where ACC_OWNER_NID='28502063200094') loop  delete   REQ_ACTIVITY where REQ_CODE =ch.REQ_CODE ; delete from REQ_BAKERY_ACH_DATA where REQ_CODE = ch.REQ_CODE; delete from REQUESTS   where REQ_CODE = ch.REQ_CODE;commit; end loop; end;": null
+
+2019-04-23 13:40:13 - [TEST_STEP][PASSED] - dataBaseConnection.UpdateOracleQuery.conectsql("bdistribute", "12345678", Query): dataBaseConnection.UpdateOracleQuery.conectsql is PASSED
+
+2019-04-23 13:40:14 - [MESSAGE][PASSED] - dataBaseConnection.UpdateOracleQuery.conectsql is PASSED]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/General/OpenMethods/OpenBakerySystemByDirectorateEmployeeMethod" classname="Test Cases/General/OpenMethods/OpenBakerySystemByDirectorateEmployeeMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:14 - [TEST_CASE][PASSED] - Test Cases/General/OpenMethods/OpenBakerySystemByDirectorateEmployeeMethod: Test Cases/General/OpenMethods/OpenBakerySystemByDirectorateEmployeeMethod
+
+2019-04-23 13:40:14 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-04-23 13:40:14 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-04-23 13:40:14 - [MESSAGE][INFO] - Action delay is set to 0 seconds
+
+2019-04-23 13:40:18 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-04-23 13:40:18 - [TEST_STEP][PASSED] - navigateToUrl("http://81.29.102.138:7001/bakeriessystem/login.jsf"): Navigate to 'http://81.29.102.138:7001/bakeriessystem/login.jsf' successfully
+
+2019-04-23 13:40:19 - [MESSAGE][PASSED] - Navigate to 'http://81.29.102.138:7001/bakeriessystem/login.jsf' successfully
+
+2019-04-23 13:40:19 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+2019-04-23 13:40:21 - [MESSAGE][PASSED] - Current window maximized
+
+2019-04-23 13:40:21 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Login/Page_/input__username"), findTestData("BakeryDataFileDirectorateAndCommodityEmployee").getValue(1, 1)): Text 'BM0442' is set on object 'Object Repository/Login/Page_/input__username'
+
+2019-04-23 13:40:21 - [MESSAGE][PASSED] - Text 'BM0442' is set on object 'Object Repository/Login/Page_/input__username'
+
+2019-04-23 13:40:21 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Login/Page_/input__password"), findTestData("BakeryDataFileDirectorateAndCommodityEmployee").getValue(2, 1)): Text ****** has been set on object 'Object Repository/Login/Page_/input__password'
+
+2019-04-23 13:40:21 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Login/Page_/input__password'
+
+2019-04-23 13:40:21 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Login/Page_/span_")): Object: 'Object Repository/Login/Page_/span_' is clicked on
+
+2019-04-23 13:40:24 - [MESSAGE][PASSED] - Object: 'Object Repository/Login/Page_/span_' is clicked on
+
+2019-04-23 13:40:24 - [TEST_STEP][PASSED] - waitForPageLoad(3): Wait for page load successfully
+
+2019-04-23 13:40:24 - [MESSAGE][PASSED] - Wait for page load successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/General/OpenMethods/OpenCreateModifyBankAccountForBakeryTabMethod" classname="Test Cases/General/OpenMethods/OpenCreateModifyBankAccountForBakeryTabMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:24 - [TEST_CASE][PASSED] - Test Cases/General/OpenMethods/OpenCreateModifyBankAccountForBakeryTabMethod: Test Cases/General/OpenMethods/OpenCreateModifyBankAccountForBakeryTabMethod
+
+2019-04-23 13:40:24 - [TEST_STEP][PASSED] - navigateToUrl("http://81.29.102.138:7001/bakeriessystem/manager/EditBakeryAccount.jsf"): Navigate to 'http://81.29.102.138:7001/bakeriessystem/manager/EditBakeryAccount.jsf' successfully
+
+2019-04-23 13:40:25 - [MESSAGE][PASSED] - Navigate to 'http://81.29.102.138:7001/bakeriessystem/manager/EditBakeryAccount.jsf' successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByDirectorateEmployee" classname="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByDirectorateEmployee" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:25 - [TEST_CASE][PASSED] - Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByDirectorateEmployee: Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByDirectorateEmployee
+
+2019-04-23 13:40:25 - [TEST_STEP][PASSED] - file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:25 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\BakeryDosenotHaveBankAccount.txt): null
+
+2019-04-23 13:40:25 - [TEST_STEP][PASSED] - BakeryDosenotHaveBankAccount = file.readLines(): null
+
+2019-04-23 13:40:25 - [TEST_STEP][PASSED] - println(BakeryDosenotHaveBankAccount): null
+
+2019-04-23 13:40:25 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/CreateMdifyBankAcc/Page_/input_ _formj_idt33"), BakeryDosenotHaveBankAccount): Text '[030095]' is set on object 'Object Repository/CreateMdifyBankAcc/Page_/input_ _formj_idt33'
+
+2019-04-23 13:40:26 - [MESSAGE][PASSED] - Text '[030095]' is set on object 'Object Repository/CreateMdifyBankAcc/Page_/input_ _formj_idt33'
+
+2019-04-23 13:40:26 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/CreateMdifyBankAcc/Page_/span_ (1)")): Object: 'Object Repository/CreateMdifyBankAcc/Page_/span_ (1)' is clicked on
+
+2019-04-23 13:40:26 - [MESSAGE][PASSED] - Object: 'Object Repository/CreateMdifyBankAcc/Page_/span_ (1)' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/EnterValidBankAccData" classname="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/EnterValidBankAccData" status="FAILED">
+         <failure type="FAILED" message="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/EnterValidBankAccData FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/BankAccDataField/Page_ (1)/div__ui-SelectBranch'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:37)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:604)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$6.call(Unknown Source)
+	at EnterValidBankAccData.run(EnterValidBankAccData:24)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556019605995.run(TempTestSuite1556019605995.groovy:35)
+"/>
+         <system-out><![CDATA[2019-04-23 13:40:26 - [TEST_CASE][FAILED] - Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/EnterValidBankAccData: Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/EnterValidBankAccData FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/BankAccDataField/Page_ (1)/div__ui-SelectBranch'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:37)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:604)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$6.call(Unknown Source)
+	at EnterValidBankAccData.run(EnterValidBankAccData:24)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556019605995.run(TempTestSuite1556019605995.groovy:35)
+
+
+2019-04-23 13:40:26 - [TEST_STEP][PASSED] - file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:26 - [TEST_STEP][PASSED] - FileText = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:26 - [TEST_STEP][PASSED] - click(findTestObject("BankAccDataField/Page_ (1)/span__ui-icon ui-icon-triangle-1-s ui-c_1-Select")): Object: 'Object Repository/BankAccDataField/Page_ (1)/span__ui-icon ui-icon-triangle-1-s ui-c_1-Select' is clicked on
+
+2019-04-23 13:40:26 - [MESSAGE][PASSED] - Object: 'Object Repository/BankAccDataField/Page_ (1)/span__ui-icon ui-icon-triangle-1-s ui-c_1-Select' is clicked on
+
+2019-04-23 13:40:26 - [TEST_STEP][PASSED] - click(findTestObject("BankAccDataField/Page_ (1)/li_   -")): Object: 'Object Repository/BankAccDataField/Page_ (1)/li_   -' is clicked on
+
+2019-04-23 13:40:26 - [MESSAGE][PASSED] - Object: 'Object Repository/BankAccDataField/Page_ (1)/li_   -' is clicked on
+
+2019-04-23 13:40:26 - [TEST_STEP][FAILED] - click(findTestObject("BankAccDataField/Page_ (1)/div__ui-SelectBranch"), CONTINUE_ON_FAILURE): Unable to click on object 'Object Repository/BankAccDataField/Page_ (1)/div__ui-SelectBranch'
+
+2019-04-23 13:40:27 - [MESSAGE][FAILED] - Unable to click on object 'Object Repository/BankAccDataField/Page_ (1)/div__ui-SelectBranch'
+[[ATTACHMENT|C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Reports\\TestSuites\\CreateBankAccountForBakery\\20190423_134005\\1556019627155.png]]
+
+2019-04-23 13:40:27 - [TEST_STEP][PASSED] - click(findTestObject("BankAccDataField/Page_ (1)/div__ui-SelectBranch")): Object: 'Object Repository/BankAccDataField/Page_ (1)/div__ui-SelectBranch' is clicked on
+
+2019-04-23 13:40:27 - [MESSAGE][PASSED] - Object: 'Object Repository/BankAccDataField/Page_ (1)/div__ui-SelectBranch' is clicked on
+
+2019-04-23 13:40:27 - [TEST_STEP][PASSED] - click(findTestObject("BankAccDataField/Page_ (1)/li_ (DokkiBranch)")): Object: 'Object Repository/BankAccDataField/Page_ (1)/li_ (DokkiBranch)' is clicked on
+
+2019-04-23 13:40:27 - [MESSAGE][PASSED] - Object: 'Object Repository/BankAccDataField/Page_ (1)/li_ (DokkiBranch)' is clicked on
+
+2019-04-23 13:40:27 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\AccNumber.txt): null
+
+2019-04-23 13:40:27 - [TEST_STEP][PASSED] - FileText = file.readLines(): null
+
+2019-04-23 13:40:27 - [TEST_STEP][PASSED] - setText(findTestObject("CreateMdifyBankAcc/Page_/input_ _formj_idt37j_idt55"), toString().replaceAll("\p{P}", "")): Text '123456789012' is set on object 'Object Repository/CreateMdifyBankAcc/Page_/input_ _formj_idt37j_idt55'
+
+2019-04-23 13:40:28 - [MESSAGE][PASSED] - Text '123456789012' is set on object 'Object Repository/CreateMdifyBankAcc/Page_/input_ _formj_idt37j_idt55'
+
+2019-04-23 13:40:28 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\AccName.txt): null
+
+2019-04-23 13:40:28 - [TEST_STEP][PASSED] - setText(findTestObject("BankAccDataField/Page_ (1)/input_ _formj_idt37j_idt57"), toString().replaceAll("\p{P}", "")): Text 'AutomationTesting' is set on object 'Object Repository/BankAccDataField/Page_ (1)/input_ _formj_idt37j_idt57'
+
+2019-04-23 13:40:28 - [MESSAGE][PASSED] - Text 'AutomationTesting' is set on object 'Object Repository/BankAccDataField/Page_ (1)/input_ _formj_idt37j_idt57'
+
+2019-04-23 13:40:28 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\NIDNumber.txt): null
+
+2019-04-23 13:40:28 - [TEST_STEP][PASSED] - setText(findTestObject("BankAccDataField/Page_ (1)/input_   _formj_idt37j_idt59"), toString().replaceAll("\p{P}", "")): Text '28502063200094' is set on object 'Object Repository/BankAccDataField/Page_ (1)/input_   _formj_idt37j_idt59'
+
+2019-04-23 13:40:28 - [MESSAGE][PASSED] - Text '28502063200094' is set on object 'Object Repository/BankAccDataField/Page_ (1)/input_   _formj_idt37j_idt59'
+
+2019-04-23 13:40:28 - [TEST_STEP][PASSED] - setText(findTestObject("BankAccDataField/Page_ (1)/textarea_ _formj_idt37j_idt61"), "ملاحظات", CONTINUE_ON_FAILURE): Text 'ملاحظات' is set on object 'Object Repository/BankAccDataField/Page_ (1)/textarea_ _formj_idt37j_idt61'
+
+2019-04-23 13:40:28 - [MESSAGE][PASSED] - Text 'ملاحظات' is set on object 'Object Repository/BankAccDataField/Page_ (1)/textarea_ _formj_idt37j_idt61'
+
+2019-04-23 13:40:28 - [TEST_STEP][FAILED] - click(findTestObject("BankAccDataField/Page_ (1)/span__1")): click(findTestObject("BankAccDataField/Page_ (1)/span__1")) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/BankAccDataField/Page_ (1)/div__ui-SelectBranch'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:37)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:604)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$6.call(Unknown Source)
+	at EnterValidBankAccData.run(EnterValidBankAccData:24)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556019605995.run(TempTestSuite1556019605995.groovy:35)
+
+
+2019-04-23 13:40:28 - [MESSAGE][PASSED] - Object: 'Object Repository/BankAccDataField/Page_ (1)/span__1' is clicked on
+
+2019-04-23 13:40:28 - [MESSAGE][FAILED] - click(findTestObject("BankAccDataField/Page_ (1)/span__1")) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/BankAccDataField/Page_ (1)/div__ui-SelectBranch'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:37)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:604)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$6.call(Unknown Source)
+	at EnterValidBankAccData.run(EnterValidBankAccData:24)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556019605995.run(TempTestSuite1556019605995.groovy:35)]]></system-out>
+         <system-err><![CDATA[2019-04-23 13:40:26 - [TEST_CASE][FAILED] - Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/EnterValidBankAccData: Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/EnterValidBankAccData FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/BankAccDataField/Page_ (1)/div__ui-SelectBranch'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:37)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:604)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$6.call(Unknown Source)
+	at EnterValidBankAccData.run(EnterValidBankAccData:24)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556019605995.run(TempTestSuite1556019605995.groovy:35)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Reusable/Assertion/BankAccCreatingSuccessfulyAssertionMethod" classname="Test Cases/Reusable/Assertion/BankAccCreatingSuccessfulyAssertionMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:28 - [TEST_CASE][PASSED] - Test Cases/Reusable/Assertion/BankAccCreatingSuccessfulyAssertionMethod: Test Cases/Reusable/Assertion/BankAccCreatingSuccessfulyAssertionMethod
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - click(findTestObject("BankAccDataField/Page_ (1)/span_   791")): Object: 'Object Repository/BankAccDataField/Page_ (1)/span_   791' is clicked on
+
+2019-04-23 13:40:29 - [MESSAGE][PASSED] - Object: 'Object Repository/BankAccDataField/Page_ (1)/span_   791' is clicked on
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - SuccessfulMessage = getText(findTestObject("BankAccDataField/Page_ (1)/div_     791")): Text of object 'Object Repository/BankAccDataField/Page_ (1)/div_     791' is: 'تم التنفيذ بنجاح
+رقم الطلب: 797'
+
+2019-04-23 13:40:29 - [MESSAGE][PASSED] - Text of object 'Object Repository/BankAccDataField/Page_ (1)/div_     791' is: 'تم التنفيذ بنجاح
+رقم الطلب: 797'
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - println(SuccessfulMessage): null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - assert SuccessfulMessage.contains("تم التنفيذ بنجاح"): null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - ReqCode = SuccessfulMessage.replaceAll("[^\d]", ""): null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ReqCode.txt): null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - file.write(ReqCode): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/ReviewByEBCMethod" classname="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/ReviewByEBCMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:29 - [TEST_CASE][PASSED] - Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/ReviewByEBCMethod: Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/ReviewByEBCMethod
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - Query = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - ExpectedResult = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ReqCode.txt): null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - ReqCode = file.readLines(): null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - ReqCode = ReqCode.replaceAll("\p{P}", ""): null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - Query = " UPDATE requests SET EBC_REVIEW_STATUS = 2 WHERE REQ_CODE =" + "'" + ReqCode + "'": null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - dataBaseConnection.UpdateOracleQuery.conectsql("bdistribute", "12345678", Query): dataBaseConnection.UpdateOracleQuery.conectsql is PASSED
+
+2019-04-23 13:40:29 - [MESSAGE][PASSED] - dataBaseConnection.UpdateOracleQuery.conectsql is PASSED
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\BankAccountReviewStatus.txt): null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - file.write("تمت المراجعة"): null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - Query = " UPDATE requests SET EBC_CHK_Name = 1 WHERE REQ_CODE =" + "'" + ReqCode + "'": null
+
+2019-04-23 13:40:29 - [TEST_STEP][PASSED] - dataBaseConnection.UpdateOracleQuery.conectsql("bdistribute", "12345678", Query): dataBaseConnection.UpdateOracleQuery.conectsql is PASSED
+
+2019-04-23 13:40:30 - [MESSAGE][PASSED] - dataBaseConnection.UpdateOracleQuery.conectsql is PASSED
+
+2019-04-23 13:40:30 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ResultOfAccountNameReview.txt): null
+
+2019-04-23 13:40:30 - [TEST_STEP][PASSED] - file.write("صحيح"): null
+
+2019-04-23 13:40:30 - [TEST_STEP][PASSED] - Query = " UPDATE requests SET EBC_CHK_ACCNUM = 1 WHERE REQ_CODE =" + "'" + ReqCode + "'": null
+
+2019-04-23 13:40:30 - [TEST_STEP][PASSED] - dataBaseConnection.UpdateOracleQuery.conectsql("bdistribute", "12345678", Query): dataBaseConnection.UpdateOracleQuery.conectsql is PASSED
+
+2019-04-23 13:40:30 - [MESSAGE][PASSED] - dataBaseConnection.UpdateOracleQuery.conectsql is PASSED
+
+2019-04-23 13:40:30 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ResultOfAccountnumberReview.txt): null
+
+2019-04-23 13:40:30 - [TEST_STEP][PASSED] - file.write("صحيح"): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/General/CloseMethod/CloseBrowserMethod" classname="Test Cases/General/CloseMethod/CloseBrowserMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:30 - [TEST_CASE][PASSED] - Test Cases/General/CloseMethod/CloseBrowserMethod: Test Cases/General/CloseMethod/CloseBrowserMethod
+
+2019-04-23 13:40:30 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-04-23 13:40:31 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/General/OpenMethods/OpenBakerySystemByCommodityAuthorityEmployeeMethod" classname="Test Cases/General/OpenMethods/OpenBakerySystemByCommodityAuthorityEmployeeMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:31 - [TEST_CASE][PASSED] - Test Cases/General/OpenMethods/OpenBakerySystemByCommodityAuthorityEmployeeMethod: Test Cases/General/OpenMethods/OpenBakerySystemByCommodityAuthorityEmployeeMethod
+
+2019-04-23 13:40:31 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-04-23 13:40:31 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-04-23 13:40:34 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-04-23 13:40:34 - [TEST_STEP][PASSED] - navigateToUrl("http://81.29.102.138:7001/bakeriessystem/login.jsf"): Navigate to 'http://81.29.102.138:7001/bakeriessystem/login.jsf' successfully
+
+2019-04-23 13:40:35 - [MESSAGE][PASSED] - Navigate to 'http://81.29.102.138:7001/bakeriessystem/login.jsf' successfully
+
+2019-04-23 13:40:35 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+2019-04-23 13:40:37 - [MESSAGE][PASSED] - Current window maximized
+
+2019-04-23 13:40:37 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Login/Page_/input__username"), findTestData("BakeryDataFileDirectorateAndCommodityEmployee").getValue(9, 1)): Text 'B-SCA-01' is set on object 'Object Repository/Login/Page_/input__username'
+
+2019-04-23 13:40:37 - [MESSAGE][PASSED] - Text 'B-SCA-01' is set on object 'Object Repository/Login/Page_/input__username'
+
+2019-04-23 13:40:37 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Login/Page_/input__password"), findTestData("BakeryDataFileDirectorateAndCommodityEmployee").getValue(10, 1)): Text ****** has been set on object 'Object Repository/Login/Page_/input__password'
+
+2019-04-23 13:40:37 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Login/Page_/input__password'
+
+2019-04-23 13:40:37 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Login/Page_/span_")): Object: 'Object Repository/Login/Page_/span_' is clicked on
+
+2019-04-23 13:40:39 - [MESSAGE][PASSED] - Object: 'Object Repository/Login/Page_/span_' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/General/OpenMethods/OpenReviewTheCreationModificationofTheBankAccountForBakeryMethod" classname="Test Cases/General/OpenMethods/OpenReviewTheCreationModificationofTheBankAccountForBakeryMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:39 - [TEST_CASE][PASSED] - Test Cases/General/OpenMethods/OpenReviewTheCreationModificationofTheBankAccountForBakeryMethod: Test Cases/General/OpenMethods/OpenReviewTheCreationModificationofTheBankAccountForBakeryMethod
+
+2019-04-23 13:40:40 - [TEST_STEP][PASSED] - navigateToUrl("http://81.29.102.138:7001/bakeriessystem/commodityAuth/EditBakeryAccountAudit.jsf"): Navigate to 'http://81.29.102.138:7001/bakeriessystem/commodityAuth/EditBakeryAccountAudit.jsf' successfully
+
+2019-04-23 13:40:41 - [MESSAGE][PASSED] - Navigate to 'http://81.29.102.138:7001/bakeriessystem/commodityAuth/EditBakeryAccountAudit.jsf' successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByCommodityEmployee" classname="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByCommodityEmployee" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:41 - [TEST_CASE][PASSED] - Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByCommodityEmployee: Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByCommodityEmployee
+
+2019-04-23 13:40:41 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\BakeryDosenotHaveBankAccount.txt): null
+
+2019-04-23 13:40:41 - [TEST_STEP][PASSED] - BakeryDosenotHaveBankAccount = file.readLines(): null
+
+2019-04-23 13:40:41 - [TEST_STEP][PASSED] - setText(findTestObject("ReviewAddBankAcc/Page_/Review-BakeryCodeSearchField"), BakeryDosenotHaveBankAccount): Text '[030095]' is set on object 'Object Repository/ReviewAddBankAcc/Page_/Review-BakeryCodeSearchField'
+
+2019-04-23 13:40:42 - [MESSAGE][PASSED] - Text '[030095]' is set on object 'Object Repository/ReviewAddBankAcc/Page_/Review-BakeryCodeSearchField'
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - click(findTestObject("ReviewAddBankAcc/Page_/Review-SearchButton")): Object: 'Object Repository/ReviewAddBankAcc/Page_/Review-SearchButton' is clicked on
+
+2019-04-23 13:40:42 - [MESSAGE][PASSED] - Object: 'Object Repository/ReviewAddBankAcc/Page_/Review-SearchButton' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Reusable/Assertion/ReviewBankAccountCreationByCommunityEmployeeAssertionMethod" classname="Test Cases/Reusable/Assertion/ReviewBankAccountCreationByCommunityEmployeeAssertionMethod" status="FAILED">
+         <failure type="FAILED" message="Test Cases/Reusable/Assertion/ReviewBankAccountCreationByCommunityEmployeeAssertionMethod FAILED.
+Reason:
+Assertion failed: 
+
+assert ActualReqCode.contains( file.readLines().toString())
+       |             |         |    |           |
+       797           false     |    [797]       [797]
+                               C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ReqCode.txt
+
+	at ReviewBankAccountCreationByCommunityEmployeeAssertionMethod.run(ReviewBankAccountCreationByCommunityEmployeeAssertionMethod:38)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556019605995.run(TempTestSuite1556019605995.groovy:35)
+"/>
+         <system-out><![CDATA[2019-04-23 13:40:42 - [TEST_CASE][FAILED] - Test Cases/Reusable/Assertion/ReviewBankAccountCreationByCommunityEmployeeAssertionMethod: Test Cases/Reusable/Assertion/ReviewBankAccountCreationByCommunityEmployeeAssertionMethod FAILED.
+Reason:
+Assertion failed: 
+
+assert ActualReqCode.contains( file.readLines().toString())
+       |             |         |    |           |
+       797           false     |    [797]       [797]
+                               C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ReqCode.txt
+
+	at ReviewBankAccountCreationByCommunityEmployeeAssertionMethod.run(ReviewBankAccountCreationByCommunityEmployeeAssertionMethod:38)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556019605995.run(TempTestSuite1556019605995.groovy:35)
+
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - SplitArrResult = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - today = new java.util.Date(): null
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - click(findTestObject("DynamicWebTables/DynamicWebRow")): Object: 'Object Repository/DynamicWebTables/DynamicWebRow' is clicked on
+
+2019-04-23 13:40:42 - [MESSAGE][PASSED] - Object: 'Object Repository/DynamicWebTables/DynamicWebRow' is clicked on
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - RowValue = getText(findTestObject("DynamicWebTables/DynamicWebRow")): Text of object 'Object Repository/DynamicWebTables/DynamicWebRow' is: '797 23/04/2019 أحمد
+التفاصيل'
+
+2019-04-23 13:40:42 - [MESSAGE][PASSED] - Text of object 'Object Repository/DynamicWebTables/DynamicWebRow' is: '797 23/04/2019 أحمد
+التفاصيل'
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - println(RowValue): null
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - SplitArrResult = RowValue.split(" "): null
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - println(SplitArrResult): null
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - ActualReqCode = SplitArrResult[0]: null
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - println(ActualReqCode): null
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ReqCode.txt): null
+
+2019-04-23 13:40:42 - [TEST_STEP][FAILED] - assert ActualReqCode.contains(readLines().toString()): assert ActualReqCode.contains(readLines().toString()) FAILED.
+Reason:
+Assertion failed: 
+
+assert ActualReqCode.contains( file.readLines().toString())
+       |             |         |    |           |
+       797           false     |    [797]       [797]
+                               C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ReqCode.txt
+
+	at ReviewBankAccountCreationByCommunityEmployeeAssertionMethod.run(ReviewBankAccountCreationByCommunityEmployeeAssertionMethod:38)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556019605995.run(TempTestSuite1556019605995.groovy:35)
+
+
+2019-04-23 13:40:42 - [MESSAGE][FAILED] - assert ActualReqCode.contains(readLines().toString()) FAILED.
+Reason:
+Assertion failed: 
+
+assert ActualReqCode.contains( file.readLines().toString())
+       |             |         |    |           |
+       797           false     |    [797]       [797]
+                               C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ReqCode.txt
+
+	at ReviewBankAccountCreationByCommunityEmployeeAssertionMethod.run(ReviewBankAccountCreationByCommunityEmployeeAssertionMethod:38)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556019605995.run(TempTestSuite1556019605995.groovy:35)]]></system-out>
+         <system-err><![CDATA[2019-04-23 13:40:42 - [TEST_CASE][FAILED] - Test Cases/Reusable/Assertion/ReviewBankAccountCreationByCommunityEmployeeAssertionMethod: Test Cases/Reusable/Assertion/ReviewBankAccountCreationByCommunityEmployeeAssertionMethod FAILED.
+Reason:
+Assertion failed: 
+
+assert ActualReqCode.contains( file.readLines().toString())
+       |             |         |    |           |
+       797           false     |    [797]       [797]
+                               C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ReqCode.txt
+
+	at ReviewBankAccountCreationByCommunityEmployeeAssertionMethod.run(ReviewBankAccountCreationByCommunityEmployeeAssertionMethod:38)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556019605995.run(TempTestSuite1556019605995.groovy:35)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/General/OpenMethods/OpenBankAccDetailsScreenByCommunityEmpMethod" classname="Test Cases/General/OpenMethods/OpenBankAccDetailsScreenByCommunityEmpMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:42 - [TEST_CASE][PASSED] - Test Cases/General/OpenMethods/OpenBankAccDetailsScreenByCommunityEmpMethod: Test Cases/General/OpenMethods/OpenBankAccDetailsScreenByCommunityEmpMethod
+
+2019-04-23 13:40:42 - [TEST_STEP][PASSED] - click(findTestObject("ReviewAddBankAcc/Page_/DetailsButton")): Object: 'Object Repository/ReviewAddBankAcc/Page_/DetailsButton' is clicked on
+
+2019-04-23 13:40:43 - [MESSAGE][PASSED] - Object: 'Object Repository/ReviewAddBankAcc/Page_/DetailsButton' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Reusable/Assertion/AssertOnEBCActionByCommunityEmployeeMethod" classname="Test Cases/Reusable/Assertion/AssertOnEBCActionByCommunityEmployeeMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:43 - [TEST_CASE][PASSED] - Test Cases/Reusable/Assertion/AssertOnEBCActionByCommunityEmployeeMethod: Test Cases/Reusable/Assertion/AssertOnEBCActionByCommunityEmployeeMethod
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - EBCTableData = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\BankAccountReviewStatus.txt): null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - BankAccountReviewstatus = file.readLines(): null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ResultOfAccountNameReview.txt): null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - ActualAccountNameStatus = file.readLines(): null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ResultOfAccountnumberReview.txt): null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - ActualAccountNumberStatus = file.readLines(): null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - EBCTableData = getText(findTestObject("ReviewAddBankAcc/Page_/TableConfirmationData")): Text of object 'Object Repository/ReviewAddBankAcc/Page_/TableConfirmationData' is: 'حالة مراجعة الحساب البنكى
+تمت المراجعة
+نتيجة مراجعة أسم الحساب
+صحيح
+نتيجة مراجعة رقم الحساب
+صحيح'
+
+2019-04-23 13:40:43 - [MESSAGE][PASSED] - Text of object 'Object Repository/ReviewAddBankAcc/Page_/TableConfirmationData' is: 'حالة مراجعة الحساب البنكى
+تمت المراجعة
+نتيجة مراجعة أسم الحساب
+صحيح
+نتيجة مراجعة رقم الحساب
+صحيح'
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - SplitArrResult = EBCTableData.split("
+"): null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - BankAccountReviewStatus = SplitArrResult[1]: null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - assert BankAccountReviewstatus.contains(BankAccountReviewStatus): null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - ResultOfAccountNameReview = SplitArrResult[3]: null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - assert ActualAccountNameStatus.contains(ResultOfAccountNameReview): null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - ResultOfAccountnumberReview = SplitArrResult[5]: null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - assert ActualAccountNumberStatus.contains(ResultOfAccountnumberReview): null
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - verifyElementClickable(findTestObject("ReviewAddBankAcc/Page_/AcceptButton")): Object 'Object Repository/ReviewAddBankAcc/Page_/AcceptButton' is clickable
+
+2019-04-23 13:40:43 - [MESSAGE][PASSED] - Object 'Object Repository/ReviewAddBankAcc/Page_/AcceptButton' is clickable
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - verifyElementClickable(findTestObject("ReviewAddBankAcc/Page_/RejectButton")): Object 'Object Repository/ReviewAddBankAcc/Page_/RejectButton' is clickable
+
+2019-04-23 13:40:43 - [MESSAGE][PASSED] - Object 'Object Repository/ReviewAddBankAcc/Page_/RejectButton' is clickable]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/AcceptBankAccRequestByCommunityEmpMethod" classname="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/AcceptBankAccRequestByCommunityEmpMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:43 - [TEST_CASE][PASSED] - Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/AcceptBankAccRequestByCommunityEmpMethod: Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/AcceptBankAccRequestByCommunityEmpMethod
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - click(findTestObject("ReviewAddBankAcc/Page_/AcceptButton")): Object: 'Object Repository/ReviewAddBankAcc/Page_/AcceptButton' is clicked on
+
+2019-04-23 13:40:43 - [MESSAGE][PASSED] - Object: 'Object Repository/ReviewAddBankAcc/Page_/AcceptButton' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/General/CloseMethod/CloseBrowserMethod" classname="Test Cases/General/CloseMethod/CloseBrowserMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:43 - [TEST_CASE][PASSED] - Test Cases/General/CloseMethod/CloseBrowserMethod: Test Cases/General/CloseMethod/CloseBrowserMethod
+
+2019-04-23 13:40:43 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-04-23 13:40:44 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/General/OpenMethods/OpenBakerySystemByDirectorateEmployeeMethod" classname="Test Cases/General/OpenMethods/OpenBakerySystemByDirectorateEmployeeMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:44 - [TEST_CASE][PASSED] - Test Cases/General/OpenMethods/OpenBakerySystemByDirectorateEmployeeMethod: Test Cases/General/OpenMethods/OpenBakerySystemByDirectorateEmployeeMethod
+
+2019-04-23 13:40:44 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-04-23 13:40:44 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-04-23 13:40:46 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-04-23 13:40:46 - [TEST_STEP][PASSED] - navigateToUrl("http://81.29.102.138:7001/bakeriessystem/login.jsf"): Navigate to 'http://81.29.102.138:7001/bakeriessystem/login.jsf' successfully
+
+2019-04-23 13:40:48 - [MESSAGE][PASSED] - Navigate to 'http://81.29.102.138:7001/bakeriessystem/login.jsf' successfully
+
+2019-04-23 13:40:48 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+2019-04-23 13:40:49 - [MESSAGE][PASSED] - Current window maximized
+
+2019-04-23 13:40:49 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Login/Page_/input__username"), findTestData("BakeryDataFileDirectorateAndCommodityEmployee").getValue(1, 1)): Text 'BM0442' is set on object 'Object Repository/Login/Page_/input__username'
+
+2019-04-23 13:40:49 - [MESSAGE][PASSED] - Text 'BM0442' is set on object 'Object Repository/Login/Page_/input__username'
+
+2019-04-23 13:40:49 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Login/Page_/input__password"), findTestData("BakeryDataFileDirectorateAndCommodityEmployee").getValue(2, 1)): Text ****** has been set on object 'Object Repository/Login/Page_/input__password'
+
+2019-04-23 13:40:50 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Login/Page_/input__password'
+
+2019-04-23 13:40:50 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Login/Page_/span_")): Object: 'Object Repository/Login/Page_/span_' is clicked on
+
+2019-04-23 13:40:53 - [MESSAGE][PASSED] - Object: 'Object Repository/Login/Page_/span_' is clicked on
+
+2019-04-23 13:40:53 - [TEST_STEP][PASSED] - waitForPageLoad(3): Wait for page load successfully
+
+2019-04-23 13:40:53 - [MESSAGE][PASSED] - Wait for page load successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/General/OpenMethods/OpenCreateModifyBankAccountForBakeryTabMethod" classname="Test Cases/General/OpenMethods/OpenCreateModifyBankAccountForBakeryTabMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:53 - [TEST_CASE][PASSED] - Test Cases/General/OpenMethods/OpenCreateModifyBankAccountForBakeryTabMethod: Test Cases/General/OpenMethods/OpenCreateModifyBankAccountForBakeryTabMethod
+
+2019-04-23 13:40:53 - [TEST_STEP][PASSED] - navigateToUrl("http://81.29.102.138:7001/bakeriessystem/manager/EditBakeryAccount.jsf"): Navigate to 'http://81.29.102.138:7001/bakeriessystem/manager/EditBakeryAccount.jsf' successfully
+
+2019-04-23 13:40:53 - [MESSAGE][PASSED] - Navigate to 'http://81.29.102.138:7001/bakeriessystem/manager/EditBakeryAccount.jsf' successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByDirectorateEmployee" classname="Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByDirectorateEmployee" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:53 - [TEST_CASE][PASSED] - Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByDirectorateEmployee: Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByDirectorateEmployee
+
+2019-04-23 13:40:53 - [TEST_STEP][PASSED] - file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+2019-04-23 13:40:53 - [TEST_STEP][PASSED] - file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\BakeryDosenotHaveBankAccount.txt): null
+
+2019-04-23 13:40:53 - [TEST_STEP][PASSED] - BakeryDosenotHaveBankAccount = file.readLines(): null
+
+2019-04-23 13:40:53 - [TEST_STEP][PASSED] - println(BakeryDosenotHaveBankAccount): null
+
+2019-04-23 13:40:53 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/CreateMdifyBankAcc/Page_/input_ _formj_idt33"), BakeryDosenotHaveBankAccount): Text '[030095]' is set on object 'Object Repository/CreateMdifyBankAcc/Page_/input_ _formj_idt33'
+
+2019-04-23 13:40:54 - [MESSAGE][PASSED] - Text '[030095]' is set on object 'Object Repository/CreateMdifyBankAcc/Page_/input_ _formj_idt33'
+
+2019-04-23 13:40:54 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/CreateMdifyBankAcc/Page_/span_ (1)")): Object: 'Object Repository/CreateMdifyBankAcc/Page_/span_ (1)' is clicked on
+
+2019-04-23 13:40:54 - [MESSAGE][PASSED] - Object: 'Object Repository/CreateMdifyBankAcc/Page_/span_ (1)' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Reusable/Assertion/CanAccessBankAccontTabAssertionMethod" classname="Test Cases/Reusable/Assertion/CanAccessBankAccontTabAssertionMethod" status="PASSED">
+         <system-out><![CDATA[2019-04-23 13:40:54 - [TEST_CASE][PASSED] - Test Cases/Reusable/Assertion/CanAccessBankAccontTabAssertionMethod: Test Cases/Reusable/Assertion/CanAccessBankAccontTabAssertionMethod
+
+2019-04-23 13:40:54 - [TEST_STEP][PASSED] - click(findTestObject("BankAccDataField/Page_ (1)/BankAccountDataTab")): Object: 'Object Repository/BankAccDataField/Page_ (1)/BankAccountDataTab' is clicked on
+
+2019-04-23 13:40:54 - [MESSAGE][PASSED] - Object: 'Object Repository/BankAccDataField/Page_ (1)/BankAccountDataTab' is clicked on
+
+2019-04-23 13:40:54 - [TEST_STEP][PASSED] - verifyElementPresent(findTestObject("BankAccDataField/Page_ (1)/BankAccountDataTab"), 0): Object 'Object Repository/BankAccDataField/Page_ (1)/BankAccountDataTab' is present
+
+2019-04-23 13:40:54 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2019-04-23 13:41:02 - [MESSAGE][PASSED] - Object 'Object Repository/BankAccDataField/Page_ (1)/BankAccountDataTab' is present]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-04-23 13:40:08 - [TEST_SUITE][FAILED] - CreateBankAccountForBakery: Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/EnterValidBankAccData FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/BankAccDataField/Page_ (1)/div__ui-SelectBranch'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:37)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:604)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$6.call(Unknown Source)
+	at EnterValidBankAccData.run(EnterValidBankAccData:24)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556019605995.run(TempTestSuite1556019605995.groovy:35)]]></system-out>
+      <system-err><![CDATA[2019-04-23 13:40:08 - [TEST_SUITE][FAILED] - CreateBankAccountForBakery: Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/EnterValidBankAccData FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/BankAccDataField/Page_ (1)/div__ui-SelectBranch'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:37)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:604)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$6.call(Unknown Source)
+	at EnterValidBankAccData.run(EnterValidBankAccData:24)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556019605995.run(TempTestSuite1556019605995.groovy:35)]]></system-err>
+   </testsuite>
+</testsuites>

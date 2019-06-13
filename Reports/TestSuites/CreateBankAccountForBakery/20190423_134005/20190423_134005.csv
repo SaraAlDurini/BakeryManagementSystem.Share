@@ -1,0 +1,179 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+CreateBankAccountForBakery,Chrome 73.0.3683.103,,2019-04-23 13:40:08,2019-04-23 13:41:02,53.972s,FAILED
+,,,,,,
+Test Cases/General/GetData/AddBakeryBankAccountGetData,Chrome 73.0.3683.103,,2019-04-23 13:40:09,2019-04-23 13:40:13,4.166s,PASSED
+Query = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:09,2019-04-23 13:40:09,0.004s,PASSED
+file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:09,2019-04-23 13:40:09,0.000s,PASSED
+"Query = ""select * from base_bakery where BAKERY_CODE not in (select bakery_code from bakery_ach_data) and base_bakery.governorate_code=03""",Chrome 73.0.3683.103,,2019-04-23 13:40:09,2019-04-23 13:40:09,0.000s,PASSED
+println(Query),Chrome 73.0.3683.103,,2019-04-23 13:40:09,2019-04-23 13:40:09,0.015s,PASSED
+"dataBaseConnection.GetOracleQueryResult.conectsql(""bdistribute"", ""12345678"", Query, ""C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\BakeryDosenotHaveBankAccount.txt"")",Chrome 73.0.3683.103,,2019-04-23 13:40:09,2019-04-23 13:40:11,2.015s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ValidUserName.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:11,2019-04-23 13:40:11,0.001s,PASSED
+"file.write(findTestData(""BakeryDataFileDirectorateAndCommodityEmployee"").getValue(1, 1))",Chrome 73.0.3683.103,,2019-04-23 13:40:11,2019-04-23 13:40:12,1.220s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ValidPassword.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:12,2019-04-23 13:40:12,0.001s,PASSED
+"file.write(findTestData(""BakeryDataFileDirectorateAndCommodityEmployee"").getValue(2, 1))",Chrome 73.0.3683.103,,2019-04-23 13:40:12,2019-04-23 13:40:13,0.104s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\AccNumber.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:13,2019-04-23 13:40:13,0.002s,PASSED
+"file.write(findTestData(""BakeryDataFileDirectorateAndCommodityEmployee"").getValue(6, 1))",Chrome 73.0.3683.103,,2019-04-23 13:40:13,2019-04-23 13:40:13,0.102s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\AccName.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:13,2019-04-23 13:40:13,0.016s,PASSED
+"file.write(findTestData(""BakeryDataFileDirectorateAndCommodityEmployee"").getValue(7, 1))",Chrome 73.0.3683.103,,2019-04-23 13:40:13,2019-04-23 13:40:13,0.091s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\NIDNumber.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:13,2019-04-23 13:40:13,0.000s,PASSED
+"file.write(""28502063200094"")",Chrome 73.0.3683.103,,2019-04-23 13:40:13,2019-04-23 13:40:13,0.000s,PASSED
+,,,,,,
+Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/DeleteAllReqBySpecificNID,Chrome 73.0.3683.103,,2019-04-23 13:40:13,2019-04-23 13:40:14,0.756s,PASSED
+Query = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:13,2019-04-23 13:40:13,0.002s,PASSED
+"Query = ""begin for ch in (select REQ_CODE from REQ_BAKERY_ACH_DATA  where ACC_OWNER_NID='28502063200094') loop  delete   REQ_ACTIVITY where REQ_CODE =ch.REQ_CODE ; delete from REQ_BAKERY_ACH_DATA where REQ_CODE = ch.REQ_CODE; delete from REQUESTS   where REQ_CODE = ch.REQ_CODE;commit; end loop; end;""",Chrome 73.0.3683.103,,2019-04-23 13:40:13,2019-04-23 13:40:13,0.000s,PASSED
+"dataBaseConnection.UpdateOracleQuery.conectsql(""bdistribute"", ""12345678"", Query)",Chrome 73.0.3683.103,,2019-04-23 13:40:13,2019-04-23 13:40:14,0.277s,PASSED
+,,,,,,
+Test Cases/General/OpenMethods/OpenBakerySystemByDirectorateEmployeeMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:14,2019-04-23 13:40:24,10.200s,PASSED
+"openBrowser("""")",Chrome 73.0.3683.103,,2019-04-23 13:40:14,2019-04-23 13:40:18,3.799s,PASSED
+"navigateToUrl(""http://81.29.102.138:7001/bakeriessystem/login.jsf"")",Chrome 73.0.3683.103,,2019-04-23 13:40:18,2019-04-23 13:40:19,1.789s,PASSED
+maximizeWindow(),Chrome 73.0.3683.103,,2019-04-23 13:40:19,2019-04-23 13:40:21,1.162s,PASSED
+"setText(findTestObject(""Object Repository/Login/Page_/input__username""), findTestData(""BakeryDataFileDirectorateAndCommodityEmployee"").getValue(1, 1))",Chrome 73.0.3683.103,,2019-04-23 13:40:21,2019-04-23 13:40:21,0.269s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Login/Page_/input__password""), findTestData(""BakeryDataFileDirectorateAndCommodityEmployee"").getValue(2, 1))",Chrome 73.0.3683.103,,2019-04-23 13:40:21,2019-04-23 13:40:21,0.290s,PASSED
+"click(findTestObject(""Object Repository/Login/Page_/span_""))",Chrome 73.0.3683.103,,2019-04-23 13:40:21,2019-04-23 13:40:24,2.505s,PASSED
+waitForPageLoad(3),Chrome 73.0.3683.103,,2019-04-23 13:40:24,2019-04-23 13:40:24,0.096s,PASSED
+,,,,,,
+Test Cases/General/OpenMethods/OpenCreateModifyBankAccountForBakeryTabMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:24,2019-04-23 13:40:25,1.278s,PASSED
+"navigateToUrl(""http://81.29.102.138:7001/bakeriessystem/manager/EditBakeryAccount.jsf"")",Chrome 73.0.3683.103,,2019-04-23 13:40:24,2019-04-23 13:40:25,1.002s,PASSED
+,,,,,,
+Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByDirectorateEmployee,Chrome 73.0.3683.103,,2019-04-23 13:40:25,2019-04-23 13:40:26,0.793s,PASSED
+file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:25,2019-04-23 13:40:25,0.001s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\BakeryDosenotHaveBankAccount.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:25,2019-04-23 13:40:25,0.001s,PASSED
+BakeryDosenotHaveBankAccount = file.readLines(),Chrome 73.0.3683.103,,2019-04-23 13:40:25,2019-04-23 13:40:25,0.023s,PASSED
+println(BakeryDosenotHaveBankAccount),Chrome 73.0.3683.103,,2019-04-23 13:40:25,2019-04-23 13:40:25,0.002s,PASSED
+"setText(findTestObject(""Object Repository/CreateMdifyBankAcc/Page_/input_ _formj_idt33""), BakeryDosenotHaveBankAccount)",Chrome 73.0.3683.103,,2019-04-23 13:40:25,2019-04-23 13:40:26,0.272s,PASSED
+"click(findTestObject(""Object Repository/CreateMdifyBankAcc/Page_/span_ (1)""))",Chrome 73.0.3683.103,,2019-04-23 13:40:26,2019-04-23 13:40:26,0.128s,PASSED
+,,,,,,
+Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/EnterValidBankAccData,Chrome 73.0.3683.103,,2019-04-23 13:40:26,2019-04-23 13:40:28,2.432s,FAILED
+file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:26,2019-04-23 13:40:26,0.000s,PASSED
+FileText = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:26,2019-04-23 13:40:26,0.000s,PASSED
+"click(findTestObject(""BankAccDataField/Page_ (1)/span__ui-icon ui-icon-triangle-1-s ui-c_1-Select""))",Chrome 73.0.3683.103,,2019-04-23 13:40:26,2019-04-23 13:40:26,0.167s,PASSED
+"click(findTestObject(""BankAccDataField/Page_ (1)/li_   -""))",Chrome 73.0.3683.103,,2019-04-23 13:40:26,2019-04-23 13:40:26,0.126s,PASSED
+"click(findTestObject(""BankAccDataField/Page_ (1)/div__ui-SelectBranch""), CONTINUE_ON_FAILURE)",Chrome 73.0.3683.103,,2019-04-23 13:40:26,2019-04-23 13:40:27,0.542s,FAILED
+"click(findTestObject(""BankAccDataField/Page_ (1)/div__ui-SelectBranch""))",Chrome 73.0.3683.103,,2019-04-23 13:40:27,2019-04-23 13:40:27,0.149s,PASSED
+"click(findTestObject(""BankAccDataField/Page_ (1)/li_ (DokkiBranch)""))",Chrome 73.0.3683.103,,2019-04-23 13:40:27,2019-04-23 13:40:27,0.127s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\AccNumber.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:27,2019-04-23 13:40:27,0.001s,PASSED
+FileText = file.readLines(),Chrome 73.0.3683.103,,2019-04-23 13:40:27,2019-04-23 13:40:27,0.001s,PASSED
+"setText(findTestObject(""CreateMdifyBankAcc/Page_/input_ _formj_idt37j_idt55""), toString().replaceAll(""\p{P}"", """"))",Chrome 73.0.3683.103,,2019-04-23 13:40:27,2019-04-23 13:40:28,0.243s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\AccName.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:28,2019-04-23 13:40:28,0.002s,PASSED
+"setText(findTestObject(""BankAccDataField/Page_ (1)/input_ _formj_idt37j_idt57""), toString().replaceAll(""\p{P}"", """"))",Chrome 73.0.3683.103,,2019-04-23 13:40:28,2019-04-23 13:40:28,0.226s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\NIDNumber.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:28,2019-04-23 13:40:28,0.000s,PASSED
+"setText(findTestObject(""BankAccDataField/Page_ (1)/input_   _formj_idt37j_idt59""), toString().replaceAll(""\p{P}"", """"))",Chrome 73.0.3683.103,,2019-04-23 13:40:28,2019-04-23 13:40:28,0.204s,PASSED
+"setText(findTestObject(""BankAccDataField/Page_ (1)/textarea_ _formj_idt37j_idt61""), ""ملاحظات"", CONTINUE_ON_FAILURE)",Chrome 73.0.3683.103,,2019-04-23 13:40:28,2019-04-23 13:40:28,0.165s,PASSED
+"click(findTestObject(""BankAccDataField/Page_ (1)/span__1""))",Chrome 73.0.3683.103,,2019-04-23 13:40:28,2019-04-23 13:40:28,0.130s,FAILED
+,,,,,,
+Test Cases/Reusable/Assertion/BankAccCreatingSuccessfulyAssertionMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:28,2019-04-23 13:40:29,0.468s,PASSED
+"click(findTestObject(""BankAccDataField/Page_ (1)/span_   791""))",Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.121s,PASSED
+"SuccessfulMessage = getText(findTestObject(""BankAccDataField/Page_ (1)/div_     791""))",Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.070s,PASSED
+println(SuccessfulMessage),Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.001s,PASSED
+"assert SuccessfulMessage.contains(""تم التنفيذ بنجاح"")",Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.003s,PASSED
+"ReqCode = SuccessfulMessage.replaceAll(""[^\d]"", """")",Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.001s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ReqCode.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.001s,PASSED
+file.write(ReqCode),Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.002s,PASSED
+,,,,,,
+Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/ReviewByEBCMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:30,1.135s,PASSED
+Query = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.000s,PASSED
+file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.000s,PASSED
+ExpectedResult = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.000s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ReqCode.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.000s,PASSED
+ReqCode = file.readLines(),Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.000s,PASSED
+"ReqCode = ReqCode.replaceAll(""\p{P}"", """")",Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.016s,PASSED
+"Query = "" UPDATE requests SET EBC_REVIEW_STATUS = 2 WHERE REQ_CODE ="" + ""'"" + ReqCode + ""'""",Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.000s,PASSED
+"dataBaseConnection.UpdateOracleQuery.conectsql(""bdistribute"", ""12345678"", Query)",Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.245s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\BankAccountReviewStatus.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.001s,PASSED
+"file.write(""تمت المراجعة"")",Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.001s,PASSED
+"Query = "" UPDATE requests SET EBC_CHK_Name = 1 WHERE REQ_CODE ="" + ""'"" + ReqCode + ""'""",Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:29,0.000s,PASSED
+"dataBaseConnection.UpdateOracleQuery.conectsql(""bdistribute"", ""12345678"", Query)",Chrome 73.0.3683.103,,2019-04-23 13:40:29,2019-04-23 13:40:30,0.238s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ResultOfAccountNameReview.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:30,2019-04-23 13:40:30,0.001s,PASSED
+"file.write(""صحيح"")",Chrome 73.0.3683.103,,2019-04-23 13:40:30,2019-04-23 13:40:30,0.002s,PASSED
+"Query = "" UPDATE requests SET EBC_CHK_ACCNUM = 1 WHERE REQ_CODE ="" + ""'"" + ReqCode + ""'""",Chrome 73.0.3683.103,,2019-04-23 13:40:30,2019-04-23 13:40:30,0.001s,PASSED
+"dataBaseConnection.UpdateOracleQuery.conectsql(""bdistribute"", ""12345678"", Query)",Chrome 73.0.3683.103,,2019-04-23 13:40:30,2019-04-23 13:40:30,0.243s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ResultOfAccountnumberReview.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:30,2019-04-23 13:40:30,0.000s,PASSED
+"file.write(""صحيح"")",Chrome 73.0.3683.103,,2019-04-23 13:40:30,2019-04-23 13:40:30,0.000s,PASSED
+,,,,,,
+Test Cases/General/CloseMethod/CloseBrowserMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:30,2019-04-23 13:40:31,0.927s,PASSED
+closeBrowser(),Chrome 73.0.3683.103,,2019-04-23 13:40:30,2019-04-23 13:40:31,0.770s,PASSED
+,,,,,,
+Test Cases/General/OpenMethods/OpenBakerySystemByCommodityAuthorityEmployeeMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:31,2019-04-23 13:40:39,8.322s,PASSED
+"openBrowser("""")",Chrome 73.0.3683.103,,2019-04-23 13:40:31,2019-04-23 13:40:34,2.406s,PASSED
+"navigateToUrl(""http://81.29.102.138:7001/bakeriessystem/login.jsf"")",Chrome 73.0.3683.103,,2019-04-23 13:40:34,2019-04-23 13:40:35,1.856s,PASSED
+maximizeWindow(),Chrome 73.0.3683.103,,2019-04-23 13:40:35,2019-04-23 13:40:37,1.128s,PASSED
+"setText(findTestObject(""Object Repository/Login/Page_/input__username""), findTestData(""BakeryDataFileDirectorateAndCommodityEmployee"").getValue(9, 1))",Chrome 73.0.3683.103,,2019-04-23 13:40:37,2019-04-23 13:40:37,0.255s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Login/Page_/input__password""), findTestData(""BakeryDataFileDirectorateAndCommodityEmployee"").getValue(10, 1))",Chrome 73.0.3683.103,,2019-04-23 13:40:37,2019-04-23 13:40:37,0.199s,PASSED
+"click(findTestObject(""Object Repository/Login/Page_/span_""))",Chrome 73.0.3683.103,,2019-04-23 13:40:37,2019-04-23 13:40:39,2.190s,PASSED
+,,,,,,
+Test Cases/General/OpenMethods/OpenReviewTheCreationModificationofTheBankAccountForBakeryMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:39,2019-04-23 13:40:41,1.942s,PASSED
+"navigateToUrl(""http://81.29.102.138:7001/bakeriessystem/commodityAuth/EditBakeryAccountAudit.jsf"")",Chrome 73.0.3683.103,,2019-04-23 13:40:40,2019-04-23 13:40:41,1.540s,PASSED
+,,,,,,
+Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByCommodityEmployee,Chrome 73.0.3683.103,,2019-04-23 13:40:41,2019-04-23 13:40:42,0.538s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\BakeryDosenotHaveBankAccount.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:41,2019-04-23 13:40:41,0.000s,PASSED
+BakeryDosenotHaveBankAccount = file.readLines(),Chrome 73.0.3683.103,,2019-04-23 13:40:41,2019-04-23 13:40:41,0.000s,PASSED
+"setText(findTestObject(""ReviewAddBankAcc/Page_/Review-BakeryCodeSearchField""), BakeryDosenotHaveBankAccount)",Chrome 73.0.3683.103,,2019-04-23 13:40:41,2019-04-23 13:40:42,0.200s,PASSED
+"click(findTestObject(""ReviewAddBankAcc/Page_/Review-SearchButton""))",Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.115s,PASSED
+,,,,,,
+Test Cases/Reusable/Assertion/ReviewBankAccountCreationByCommunityEmployeeAssertionMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.514s,FAILED
+SplitArrResult = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.000s,PASSED
+file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.000s,PASSED
+today = new java.util.Date(),Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.016s,PASSED
+"click(findTestObject(""DynamicWebTables/DynamicWebRow""))",Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.130s,PASSED
+"RowValue = getText(findTestObject(""DynamicWebTables/DynamicWebRow""))",Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.054s,PASSED
+println(RowValue),Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.000s,PASSED
+"SplitArrResult = RowValue.split("" "")",Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.001s,PASSED
+println(SplitArrResult),Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.000s,PASSED
+ActualReqCode = SplitArrResult[0],Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.000s,PASSED
+println(ActualReqCode),Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.000s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ReqCode.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.000s,PASSED
+assert ActualReqCode.contains(readLines().toString()),Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:42,0.000s,FAILED
+,,,,,,
+Test Cases/General/OpenMethods/OpenBankAccDetailsScreenByCommunityEmpMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:43,0.395s,PASSED
+"click(findTestObject(""ReviewAddBankAcc/Page_/DetailsButton""))",Chrome 73.0.3683.103,,2019-04-23 13:40:42,2019-04-23 13:40:43,0.135s,PASSED
+,,,,,,
+Test Cases/Reusable/Assertion/AssertOnEBCActionByCommunityEmployeeMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.519s,PASSED
+EBCTableData = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.000s,PASSED
+file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.000s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\BankAccountReviewStatus.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.001s,PASSED
+BankAccountReviewstatus = file.readLines(),Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.001s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ResultOfAccountNameReview.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.006s,PASSED
+ActualAccountNameStatus = file.readLines(),Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.001s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\ResultOfAccountnumberReview.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.001s,PASSED
+ActualAccountNumberStatus = file.readLines(),Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.001s,PASSED
+"EBCTableData = getText(findTestObject(""ReviewAddBankAcc/Page_/TableConfirmationData""))",Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.115s,PASSED
+"SplitArrResult = EBCTableData.split(""
+"")",Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.000s,PASSED
+BankAccountReviewStatus = SplitArrResult[1],Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.001s,PASSED
+assert BankAccountReviewstatus.contains(BankAccountReviewStatus),Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.001s,PASSED
+ResultOfAccountNameReview = SplitArrResult[3],Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.000s,PASSED
+assert ActualAccountNameStatus.contains(ResultOfAccountNameReview),Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.000s,PASSED
+ResultOfAccountnumberReview = SplitArrResult[5],Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.001s,PASSED
+assert ActualAccountNumberStatus.contains(ResultOfAccountnumberReview),Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.001s,PASSED
+"verifyElementClickable(findTestObject(""ReviewAddBankAcc/Page_/AcceptButton""))",Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.060s,PASSED
+"verifyElementClickable(findTestObject(""ReviewAddBankAcc/Page_/RejectButton""))",Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.047s,PASSED
+,,,,,,
+Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/AcceptBankAccRequestByCommunityEmpMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.305s,PASSED
+"click(findTestObject(""ReviewAddBankAcc/Page_/AcceptButton""))",Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:43,0.112s,PASSED
+,,,,,,
+Test Cases/General/CloseMethod/CloseBrowserMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:44,0.736s,PASSED
+closeBrowser(),Chrome 73.0.3683.103,,2019-04-23 13:40:43,2019-04-23 13:40:44,0.728s,PASSED
+,,,,,,
+Test Cases/General/OpenMethods/OpenBakerySystemByDirectorateEmployeeMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:44,2019-04-23 13:40:53,8.780s,PASSED
+"openBrowser("""")",Chrome 73.0.3683.103,,2019-04-23 13:40:44,2019-04-23 13:40:46,2.313s,PASSED
+"navigateToUrl(""http://81.29.102.138:7001/bakeriessystem/login.jsf"")",Chrome 73.0.3683.103,,2019-04-23 13:40:46,2019-04-23 13:40:48,1.631s,PASSED
+maximizeWindow(),Chrome 73.0.3683.103,,2019-04-23 13:40:48,2019-04-23 13:40:49,1.152s,PASSED
+"setText(findTestObject(""Object Repository/Login/Page_/input__username""), findTestData(""BakeryDataFileDirectorateAndCommodityEmployee"").getValue(1, 1))",Chrome 73.0.3683.103,,2019-04-23 13:40:49,2019-04-23 13:40:49,0.215s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Login/Page_/input__password""), findTestData(""BakeryDataFileDirectorateAndCommodityEmployee"").getValue(2, 1))",Chrome 73.0.3683.103,,2019-04-23 13:40:49,2019-04-23 13:40:50,0.167s,PASSED
+"click(findTestObject(""Object Repository/Login/Page_/span_""))",Chrome 73.0.3683.103,,2019-04-23 13:40:50,2019-04-23 13:40:53,3.279s,PASSED
+waitForPageLoad(3),Chrome 73.0.3683.103,,2019-04-23 13:40:53,2019-04-23 13:40:53,0.021s,PASSED
+,,,,,,
+Test Cases/General/OpenMethods/OpenCreateModifyBankAccountForBakeryTabMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:53,2019-04-23 13:40:53,0.413s,PASSED
+"navigateToUrl(""http://81.29.102.138:7001/bakeriessystem/manager/EditBakeryAccount.jsf"")",Chrome 73.0.3683.103,,2019-04-23 13:40:53,2019-04-23 13:40:53,0.404s,PASSED
+,,,,,,
+Test Cases/SpecificTab/CreateModifyBankAccountForBakeryMethod/SearchForBakeryCodeByDirectorateEmployee,Chrome 73.0.3683.103,,2019-04-23 13:40:53,2019-04-23 13:40:54,0.371s,PASSED
+file = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>,Chrome 73.0.3683.103,,2019-04-23 13:40:53,2019-04-23 13:40:53,0.002s,PASSED
+file = new java.io.File(C:\Users\smart\Katalon Studio\BakeryManagementSystem\Cash\BakeryDosenotHaveBankAccount.txt),Chrome 73.0.3683.103,,2019-04-23 13:40:53,2019-04-23 13:40:53,0.001s,PASSED
+BakeryDosenotHaveBankAccount = file.readLines(),Chrome 73.0.3683.103,,2019-04-23 13:40:53,2019-04-23 13:40:53,0.001s,PASSED
+println(BakeryDosenotHaveBankAccount),Chrome 73.0.3683.103,,2019-04-23 13:40:53,2019-04-23 13:40:53,0.000s,PASSED
+"setText(findTestObject(""Object Repository/CreateMdifyBankAcc/Page_/input_ _formj_idt33""), BakeryDosenotHaveBankAccount)",Chrome 73.0.3683.103,,2019-04-23 13:40:53,2019-04-23 13:40:54,0.241s,PASSED
+"click(findTestObject(""Object Repository/CreateMdifyBankAcc/Page_/span_ (1)""))",Chrome 73.0.3683.103,,2019-04-23 13:40:54,2019-04-23 13:40:54,0.118s,PASSED
+,,,,,,
+Test Cases/Reusable/Assertion/CanAccessBankAccontTabAssertionMethod,Chrome 73.0.3683.103,,2019-04-23 13:40:54,2019-04-23 13:41:02,8.406s,PASSED
+"click(findTestObject(""BankAccDataField/Page_ (1)/BankAccountDataTab""))",Chrome 73.0.3683.103,,2019-04-23 13:40:54,2019-04-23 13:40:54,0.192s,PASSED
+"verifyElementPresent(findTestObject(""BankAccDataField/Page_ (1)/BankAccountDataTab""), 0)",Chrome 73.0.3683.103,,2019-04-23 13:40:54,2019-04-23 13:41:02,7.912s,PASSED
