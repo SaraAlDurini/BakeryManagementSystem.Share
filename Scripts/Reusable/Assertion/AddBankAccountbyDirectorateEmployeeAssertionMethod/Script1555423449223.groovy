@@ -18,7 +18,7 @@ File file
 String ExpectedResult
 
 // file = new File(File path in my project )
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\ReqCode.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\ReqCode.txt')
 
 // read the ReqCode from cash file and save it in string to use it in my query -> the result = [ReqNumber]
 String ReqCode = file.readLines()

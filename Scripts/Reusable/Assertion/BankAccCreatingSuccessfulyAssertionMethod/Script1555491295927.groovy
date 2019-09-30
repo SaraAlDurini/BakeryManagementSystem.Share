@@ -27,7 +27,7 @@ assert SuccessfulMessage.contains('تم التنفيذ بنجاح')
 String ReqCode = SuccessfulMessage.replaceAll('[^\\d]', '')
 
 // Save the Req code in Cash 
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\ReqCode.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\ReqCode.txt')
 
 file.write(ReqCode)
 

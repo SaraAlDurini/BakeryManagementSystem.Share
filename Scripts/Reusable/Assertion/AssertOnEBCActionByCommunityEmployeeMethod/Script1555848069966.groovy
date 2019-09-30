@@ -18,17 +18,17 @@ String EBCTableData
 File file
 
 //Get Actual Account number from Cash File
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\BankAccountReviewStatus.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\BankAccountReviewStatus.txt')
 
 String BankAccountReviewstatus = file.readLines()
 
 //Get Actual Account number from Cash File
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\ResultOfAccountNameReview.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\ResultOfAccountNameReview.txt')
 
 String ActualAccountNameStatus = file.readLines()
 
 //Get Actual Account number from Cash File
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\ResultOfAccountnumberReview.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\ResultOfAccountnumberReview.txt')
 
 String ActualAccountNumberStatus = file.readLines()
 

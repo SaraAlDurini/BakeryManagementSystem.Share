@@ -25,35 +25,35 @@ Query = 'select * from base_bakery where BAKERY_CODE not in (select bakery_code 
 
 println(Query)
 
-CustomKeywords.'dataBaseConnection.GetOracleQueryResult.conectsql'('bdistribute', '12345678', Query, 'C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\BakeryDosenotHaveBankAccount.txt')
+CustomKeywords.'dataBaseConnection.GetOracleQueryResult.conectsql'('bdistribute', '12345678', Query, 'C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\BakeryDosenotHaveBankAccount.txt')
 
 // read  User name from CSV then save it  in cash 
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\ValidUserName.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\ValidUserName.txt')
 
 file.write( findTestData('BakeryDataFileDirectorateAndCommodityEmployee').getValue(1, 1))
 
 // read  password from CSV then save it  in cash
 
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\ValidPassword.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\ValidPassword.txt')
 
 file.write( findTestData('BakeryDataFileDirectorateAndCommodityEmployee').getValue(2, 1))
 
 
 // read  Acc number  from CSV then save it  in cash
 
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\AccNumber.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\AccNumber.txt')
 
 file.write( findTestData('BakeryDataFileDirectorateAndCommodityEmployee').getValue(6, 1))
 
 // read  Acc Name  from CSV then save it  in cash
 
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\AccName.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\AccName.txt')
 
 file.write( findTestData('BakeryDataFileDirectorateAndCommodityEmployee').getValue(7, 1))
 
 // read  NID Number  from CSV then save it  in cash
 
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\NIDNumber.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\NIDNumber.txt')
 file.write("28502063200094")
 // Or get it from CSV 
 //file.write( findTestData('BakeryDataFileDirectorateAndCommodityEmployee').getValue(8, 4))

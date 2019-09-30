@@ -19,7 +19,7 @@ File file
 String ExpectedResult
 
 // file = new File(File path in my project )
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\ReqCode.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\ReqCode.txt')
 
 // read the ReqCode from cash file and save it in string to use it in my query -> the result = [ReqNumber]
 String ReqCode = file.readLines()
@@ -34,7 +34,7 @@ Query =(((' UPDATE requests SET EBC_REVIEW_STATUS = 2 WHERE REQ_CODE =' + '\'') 
 CustomKeywords.'dataBaseConnection.UpdateOracleQuery.conectsql'('bdistribute', '12345678', Query)
 
 // Save the EBC action on Cash File 
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\BankAccountReviewStatus.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\BankAccountReviewStatus.txt')
 file.write( "تمت المراجعة")
 
 // Set EBC_CHK_Name = 1  "Accept"
@@ -44,7 +44,7 @@ Query =(((' UPDATE requests SET EBC_CHK_Name = 1 WHERE REQ_CODE =' + '\'') + Req
 CustomKeywords.'dataBaseConnection.UpdateOracleQuery.conectsql'('bdistribute', '12345678', Query)
 
 // Save the EBC action on Cash File
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\ResultOfAccountNameReview.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\ResultOfAccountNameReview.txt')
 file.write( "صحيح")
 
 // Set EBC_CHK_Name = 1  "Accept"
@@ -54,6 +54,6 @@ Query =(((' UPDATE requests SET EBC_CHK_ACCNUM = 1 WHERE REQ_CODE =' + '\'') + R
 CustomKeywords.'dataBaseConnection.UpdateOracleQuery.conectsql'('bdistribute', '12345678', Query)
 
 // Save the EBC action on Cash File
-file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\ResultOfAccountnumberReview.txt')
+file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\ResultOfAccountnumberReview.txt')
 file.write( "صحيح")
 

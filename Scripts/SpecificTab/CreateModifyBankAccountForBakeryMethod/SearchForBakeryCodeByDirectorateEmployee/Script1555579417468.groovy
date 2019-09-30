@@ -16,7 +16,7 @@ import internal.GlobalVariable as GlobalVariable
 File file
 
 // Get the Backary code from cash file 
- file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem\\Cash\\BakeryDosenotHaveBankAccount.txt')
+ file = new File('C:\\Users\\smart\\Katalon Studio\\BakeryManagementSystem.Share\\Cash\\BakeryDosenotHaveBankAccount.txt')
 String BakeryDosenotHaveBankAccount = file.readLines()
 println (BakeryDosenotHaveBankAccount)
 
